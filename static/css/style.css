@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --border-radius: 0.25rem;
+    --transition-speed: 0.3s;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color var(--transition-speed);
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+.card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius);
+    transition: border-color var(--transition-speed);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color var(--transition-speed);
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
